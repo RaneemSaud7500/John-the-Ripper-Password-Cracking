@@ -1,24 +1,51 @@
-Project Overview
-The primary goal was to demonstrate how password-cracking tools like John the Ripper (JtR) are used to identify and exploit weak passwords through various attack methodologies.
+# Password Security Auditing with John the Ripper
 
-Environment & Tools
-Operating System: Kali Linux.
-Virtualization: Oracle VirtualBox.
-Primary Tool: John the Ripper (v1.9.0-jumbo-1).
-Technologies: Wordlists, Hash Algorithms (MD5, SHA-1, SHA-512).
+##  Project Overview
+The objective was to demonstrate how John the Ripper identifies weak passwords using wordlists and hash algorithms.
 
-Key Methodologies Covered
-The lab explored three distinct password cracking techniques:
-Dictionary Attack: Utilizing precompiled wordlists to find matches for target hashes.
-Brute-Force Attack: Systematically trying every character combination (exhaustive but time-consuming).
-Hybrid Attack: Combining wordlists with common variations (e.g., adding numbers or symbols to dictionary words).
 
-Lab Execution & Results
-Setup: Configured a secure virtual environment and verified JtR installation.
-Cracking Process: Performed successful cracking of weak passwords (e.g., 123456) from simulated password files.
-Hash Analysis: Analyzed the differences between cracking insecure hashes (like MD5) and more modern, complex hashes (like SHA-512).
-Findings: Demonstrated that password strength is heavily dependent on length, complexity, and the security of the underlying hash algorithm.
+##  Environment & Tools
 
-Ethical & Legal Considerations
-This project was conducted strictly for educational purposes within a controlled lab environment.
-Ethical hacking requires explicit consent and adherence to legal frameworks like CFAA and GDPR to prevent unauthorized access and protect personal data.
+* **Operating System**: Kali Linux.
+
+* **Virtualization**: Oracle VirtualBox.
+
+* **Primary Tool**: John the Ripper v1.9.0-jumbo-1.
+
+* **Hash Algorithms**: Support for various types including MD5 and SHA-1.
+
+
+##  Attack Methodologies
+
+The lab explored three primary password cracking methods:
+
+* **Dictionary Attacks**: Rely on a precompiled wordlist of likely passwords, comparing each to the target hash.
+
+* **Brute-Force Attacks**: Systematically try every possible character combination until the correct password is found.
+
+* **Hybrid Attacks**: Combine dictionary speed with brute-force thoroughness by adding common variations to wordlist entries.
+
+
+##  Lab Execution & Findings
+
+* **Vulnerability Assessment**: Simple passwords like "password123" are highly probable to be found quickly using wordlists.
+
+* **Cracking Results**: Successfully cracked weak passwords (e.g., "123456" and "larry") using different hashing methods.
+
+* **Algorithm Impact**: Older algorithms like MD5 are faster to crack because they often lack complexity and modern "salt" mechanisms.
+
+
+##  Ethical & Legal Considerations
+
+* **Consent**: Explicit permission must be secured before attempting to crack any password.
+
+* **Legal Compliance**: Unauthorized password cracking is illegal under laws like the CFAA and GDPR.
+
+* **Responsibility**: Ethical hackers must always respect privacy and operate within strictly defined boundaries.
+
+
+##  Security Recommendations
+
+* **Password Policy**: Organizations must enforce policies requiring minimum length and complexity for all passwords.
+
+* **Layered Defense**: Multi-Factor Authentication (MFA) should be mandated as an essential second layer of protection.
